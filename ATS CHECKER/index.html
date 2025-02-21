@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS Resume Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ATS Resume Checker</h1>
+    <p>Upload your resume files..</p>
+
+    <!-- File Upload -->
+    <input type="file" id="resumeUpload" accept=".pdf,.docx" />
+    <button id="analyzeBtn">Analyze Resume</button>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <!-- Results -->
+    <div class="results">
+      <h2>Analysis Results</h2>
+      <p><strong>ATS Score:</strong> <span id="score">0</span>/100</p>
+      <p><strong>Mistakes:</strong></p>
+      <ul id="mistakesList"></ul>
+      <p><strong>Suggestions:</strong></p>
+      <ul id="suggestionsList"></ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.8/mammoth.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
